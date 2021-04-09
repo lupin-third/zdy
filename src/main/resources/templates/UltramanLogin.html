@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+<body>
+<div class="header-panel">
+    <img alt="" src="../static/images/logo-login.png" height="43" width="50"/>
+</div>
+<div class="modal-body">
+    <table border="1" bgcolor="#f0ffff">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>身体颜色</th>
+        </tr>
+        </thead>
+        <tr>
+            <td th:text="1"></td>
+            <td th:text="${data.getUltramanName()}"></td>
+            <td th:text="${data.getUltramanAge()}"></td>
+            <td th:text="${data.getUltramanColor()}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+</html>

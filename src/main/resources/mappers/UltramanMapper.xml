@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.zdy.dao.UltramanDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.springboot.zdy.entity.Ultraman">
+        <id column="id" property="id" />
+        <result column="ultraman_id" property="ultramanId" />
+        <result column="ultraman_dept_name" property="ultramanDeptName" />
+        <result column="ultraman_dept_code" property="ultramanDeptCode" />
+        <result column="ultraman_light" property="ultramanLight" />
+        <result column="ultraman_max_skill" property="ultramanMaxSkill" />
+        <result column="ultraman_name" property="ultramanName" />
+        <result column="ultraman_color" property="ultramanColor" />
+        <result column="ultraman_sex" property="ultramanSex" />
+        <result column="ultraman_age" property="ultramanAge" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, ultraman_id, ultraman_dept_name, ultraman_dept_code, ultraman_light, ultraman_max_skill, ultraman_name, ultraman_color, ultraman_sex, ultraman_age
+    </sql>
+    <select id="getDataById" resultType="com.springboot.zdy.entity.Ultraman">
+        select * from ultraman where id = #{id}
+    </select>
+</mapper>

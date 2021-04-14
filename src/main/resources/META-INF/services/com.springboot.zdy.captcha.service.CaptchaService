@@ -1,0 +1,3 @@
+com.springboot.zdy.captcha.service.impl.BlockPuzzleCaptchaServiceImpl
+com.springboot.zdy.captcha.service.impl.ClickWordCaptchaServiceImpl
+com.springboot.zdy.captcha.service.impl.DefaultCaptchaServiceImpl

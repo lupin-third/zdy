@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
+   <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.springboot</groupId>
-    <artifactId>zdy</artifactId>
+    <groupId>com.springboot.zdy</groupId>
+    <artifactId>zdy-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>zdy</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -204,12 +203,21 @@
     </dependencies>
 
     <build>
-        <plugins>
+      <!--  <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-        </plugins>
+        </plugins>-->
     </build>
+    <modules>
+        <module>zdy-common</module>
+        <module>zdy-captcha</module>
+        <module>zdy-web</module>
+        <module>zdy-dao</module>
+        <module>zdy-service</module>
+        <module>zdy-entity</module>
+    </modules>
+
 
 </project>

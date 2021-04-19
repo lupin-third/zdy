@@ -1,6 +1,5 @@
 package com.springboot.zdy.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.springboot.zdy.Test;
 import org.apache.ibatis.annotations.Param;
 
@@ -9,6 +8,6 @@ import org.apache.ibatis.annotations.Param;
  * @date 2021/4/15 - 18:49
  */
 
-public interface TestDao extends BaseMapper<Test> {
+public interface TestDao  {
     Test getById(@Param("id") Integer id);
 }

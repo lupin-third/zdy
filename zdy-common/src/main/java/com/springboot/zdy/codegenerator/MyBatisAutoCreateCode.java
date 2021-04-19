@@ -1,4 +1,4 @@
-package builder;
+package com.springboot.zdy.codegenerator;
 
 
 import com.baomidou.mybatisplus.annotation.FieldFill;

@@ -1,7 +1,7 @@
 package com.springboot.zdy.controller;
 
-import com.springboot.zdy.TestService;
-import com.springboot.zdy.Test;
+import com.springboot.zdy.service.TestService;
+import com.springboot.zdy.entity.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

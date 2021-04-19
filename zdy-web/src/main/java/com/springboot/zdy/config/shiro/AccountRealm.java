@@ -3,7 +3,7 @@ package com.springboot.zdy.config.shiro;
 import cn.hutool.core.bean.BeanUtil;
 import com.springboot.zdy.entity.SysUser;
 import com.springboot.zdy.service.SysUserService;
-import com.springboot.zdy.utils.JwtUtils;
+import com.springboot.zdy.config.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;

@@ -2,12 +2,12 @@ package com.springboot.zdy.controller;
 
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.crypto.SecureUtil;
-import com.springboot.zdy.common.dto.LoginDto;
-import com.springboot.zdy.common.result.Result;
+import com.springboot.zdy.config.utils.JwtUtils;
 import com.springboot.zdy.entity.MUser;
+import com.springboot.zdy.entity.dto.LoginDto;
+import com.springboot.zdy.entity.result.Result;
 import com.springboot.zdy.service.MUserService;
 import com.springboot.zdy.service.SysUserService;
-import com.springboot.zdy.utils.JwtUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;

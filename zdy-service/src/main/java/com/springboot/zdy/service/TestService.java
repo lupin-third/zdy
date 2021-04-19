@@ -1,13 +1,13 @@
-package com.springboot.zdy.dao;
+package com.springboot.zdy.service;
 
 import com.springboot.zdy.entity.Test;
 import org.apache.ibatis.annotations.Param;
 
 /**
  * @author dengyuan zhang
- * @date 2021/4/15 - 18:49
+ * @date 2021/4/15 - 18:51
  */
 
-public interface TestDao  {
+public interface TestService {
     Test getById(@Param("id") Integer id);
 }

@@ -10,9 +10,7 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.BeetlTemplateEngine;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author dengyuan zhang
@@ -30,7 +28,14 @@ public class MyBatisAutoCreateCode {
         GlobalConfig gc = new GlobalConfig();
         //生成后代码存放的位置System.getProperty("user.dir")获取当前项目路径E:\IdeaLocalProject\springBootProject\springboot\zdy
         final String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir(projectPath + "/src/main/java");
+        String ControllerDir = projectPath + "/zdy-web/src/main/java/com/springboot/zdy/controller";
+        String EntityDir = projectPath + "/zdy-entity/src/main/java/com/springboot/zdy/entity";
+        String ServiceDir = projectPath + "/zdy-service/src/main/java/com/springboot/zdy/service";
+        String ServiceImplDir = projectPath + "/zdy-service/src/main/java/com/springboot/zdy/service/impl";
+        String DaoDir = projectPath +"/zdy-dao/src/main/java/com/springboot/zdy/dao";
+        String MapperDir = projectPath + "/zdy-web/src/main/resources/mappers";
+
+//        gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("zhang dengyuan");
         gc.setOpen(false);
         gc.setBaseResultMap(true);
@@ -60,6 +65,15 @@ public class MyBatisAutoCreateCode {
         //设置并生成存放dao接口的包
         pc.setMapper("dao");
         mpg.setPackageInfo(pc);
+        Map<String, String> pathInfo = new HashMap<>();
+        pathInfo.put(ConstVal.ENTITY_PATH,EntityDir);
+        pathInfo.put(ConstVal.MAPPER_PATH,DaoDir);
+        pathInfo.put(ConstVal.XML_PATH,MapperDir);
+        pathInfo.put(ConstVal.SERVICE_PATH,ServiceDir);
+        pathInfo.put(ConstVal.SERVICE_IMPL_PATH,ServiceImplDir);
+        pathInfo.put(ConstVal.CONTROLLER_PATH,ControllerDir);
+        pc.setPathInfo(pathInfo);
+
 
         //输出xml文件
         String templatePath = "/templates/mapper.xml.btl";
@@ -77,7 +91,7 @@ public class MyBatisAutoCreateCode {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 //自定义文件输出名，如果Entity设置了前后缀，此处xml的名称会跟着变化
-                return projectPath+"/src/main/resources/mappers"+pc.getModuleName()+"/"+tableInfo.getEntityName()+"Mapper.xml";
+                return MapperDir+"/"+tableInfo.getEntityName()+"Mapper.xml";
             }
         });
         cfg.setFileOutConfigList(focList);

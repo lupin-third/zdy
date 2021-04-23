@@ -17,6 +17,7 @@ import java.util.*;
  * @date 2021/2/25 - 14:16
  */
 public class MyBatisAutoCreateCode {
+
     public static void main(String[] args) {
         System.out.println("是否开始自动生成(y)");
         if (new Scanner(System.in).next().equalsIgnoreCase("y") == false) {
@@ -55,10 +56,10 @@ public class MyBatisAutoCreateCode {
 //        mpg.setDataSource(dsc);
         //mysql数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/zdy?characterEncoding=utf8");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setUrl("jdbc:mysql://112.124.108.164:3306/zdy?characterEncoding=utf8");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("net2k");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
 

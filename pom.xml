@@ -36,10 +36,15 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <zdy.port>127.0.0.1:3306</zdy.port>
+<!--                <zdy.port>127.0.0.1:3306</zdy.port>-->
+<!--                <zdy.dbname>zdy</zdy.dbname>-->
+<!--                <zdy.username>root</zdy.username>-->
+<!--                <zdy.password>net2k</zdy.password>-->
+                <!--远程范伟服务器-->
+                <zdy.port>112.124.108.164:3306</zdy.port>
                 <zdy.dbname>zdy</zdy.dbname>
                 <zdy.username>root</zdy.username>
-                <zdy.password>net2k</zdy.password>
+                <zdy.password>123456</zdy.password>
             </properties>
         </profile>
     </profiles>
@@ -52,11 +57,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--mysql驱动-->
+        <!--mysql驱动,目前用的范伟服务器的mysql为8以上版本所以版本为8.0.23，如切换为本地版mysql则更换为5.1.38-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
+            <version>8.0.23</version>
         </dependency>
         <!--sqlserver驱动 -->
         <dependency>

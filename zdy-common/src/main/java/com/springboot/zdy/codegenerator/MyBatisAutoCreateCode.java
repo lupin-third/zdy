@@ -47,12 +47,21 @@ public class MyBatisAutoCreateCode {
         mpg.setGlobalConfig(gc);
 
         //sqlserver数据源配置
+//        DataSourceConfig dsc = new DataSourceConfig();
+//        dsc.setUrl("jdbc:sqlserver://127.0.0.1:1433;DatabaseName=zdy");
+//        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//        dsc.setUsername("sa");
+//        dsc.setPassword("net2k");
+//        mpg.setDataSource(dsc);
+        //mysql数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:sqlserver://127.0.0.1:1433;DatabaseName=zdy");
-        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        dsc.setUsername("sa");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/zdy?characterEncoding=utf8");
+        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setUsername("root");
         dsc.setPassword("net2k");
         mpg.setDataSource(dsc);
+
+
 
         //包配置
         final PackageConfig pc = new PackageConfig();

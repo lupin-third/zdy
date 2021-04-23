@@ -30,6 +30,18 @@
                 <zdy.password>net2k</zdy.password>
             </properties>
         </profile>
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <zdy.port>127.0.0.1:3306</zdy.port>
+                <zdy.dbname>zdy</zdy.dbname>
+                <zdy.username>root</zdy.username>
+                <zdy.password>net2k</zdy.password>
+            </properties>
+        </profile>
     </profiles>
     <dependencies>
         <dependency>
@@ -39,6 +51,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--mysql驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
         </dependency>
         <!--sqlserver驱动 -->
         <dependency>

@@ -47,7 +47,7 @@ public class MyBatisAutoCreateCode {
         gc.setServiceImplName("%sServiceImpl");
         mpg.setGlobalConfig(gc);
 
-        //sqlserver数据源配置
+        //sqlserver数据源配置111
 //        DataSourceConfig dsc = new DataSourceConfig();
 //        dsc.setUrl("jdbc:sqlserver://127.0.0.1:1433;DatabaseName=zdy");
 //        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

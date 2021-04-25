@@ -53,7 +53,7 @@ public abstract class AbstractCaptchaService implements CaptchaService {
 
     protected static int captchaInterferenceOptions = 0;
 
-    //判断应用是否实现了自定义缓存，没有就使用内存
+    //判断应用是否实现了自定义缓存，没有就使用内存555
     @Override
     public void init(Properties config) {
         //初始化底图

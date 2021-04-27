@@ -1,6 +1,6 @@
 package com.springboot.zdy.service;
 
-import com.springboot.zdy.entity.SysUser;
+import com.springboot.zdy.entity.ZdyMemeTab;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author zhang dengyuan
- * @since 2021-04-19
+ * @since 2021-04-27
  */
-public interface SysUserService extends IService<SysUser> {
+public interface ZdyMemeTabService extends IService<ZdyMemeTab> {
 
 }

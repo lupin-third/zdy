@@ -1,9 +1,9 @@
 package com.springboot.zdy.config.shiro;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.springboot.zdy.entity.SysUser;
-import com.springboot.zdy.service.SysUserService;
 import com.springboot.zdy.config.utils.JwtUtils;
+import com.springboot.zdy.entity.ZdyUserTab;
+import com.springboot.zdy.service.ZdyUserTabService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -22,7 +22,7 @@ public class AccountRealm extends AuthorizingRealm {
     @Autowired
     JwtUtils jwtUtils;
     @Autowired
-    SysUserService userService;
+    ZdyUserTabService zdyUserTabService;
     @Override
     public boolean supports(AuthenticationToken token) {
         return token instanceof JwtToken;
@@ -36,7 +36,7 @@ public class AccountRealm extends AuthorizingRealm {
         JwtToken jwt = (JwtToken) token;
         log.info("jwt----------------->{}", jwt);
         String userId = jwtUtils.getClaimByToken((String) jwt.getPrincipal()).getSubject();
-        SysUser user = userService.getById(Long.parseLong(userId));
+        ZdyUserTab user = zdyUserTabService.getById(Long.parseLong(userId));
         if(user == null) {
             throw new UnknownAccountException("账户不存在！");
         }

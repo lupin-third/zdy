@@ -1,8 +1,5 @@
 package com.springboot.zdy.entity;
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 /**
  * <p>
@@ -10,29 +7,43 @@ import java.io.Serializable;
  * </p>
  *
  * @author zhang dengyuan
- * @since 2021-04-19
+ * @since 2021-04-27
  */
-public class MUser implements Serializable {
+public class ZdyUserTab implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
+    /**
+     * 用户名
+     */
     private String username;
 
-    private String avatar;
-
-    private String email;
-
+    /**
+     * 用户密码
+     */
     private String password;
 
+    /**
+     * 用户头像
+     */
+    private String avatar;
+
+    /**
+     * 用户邮箱
+     */
+    private String email;
+
+    /**
+     * 用户状态(1为正常,0为未使用)
+     */
     private Integer status;
 
-    private String created;
-
-    @TableField("lastLogin")
-    private String lastLogin;
+    /**
+     * 用户手机
+     */
+    private String phone;
 
     public Integer getId() {
         return id;
@@ -48,6 +59,14 @@ public class MUser implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAvatar() {
@@ -66,14 +85,6 @@ public class MUser implements Serializable {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public Integer getStatus() {
         return status;
     }
@@ -82,33 +93,24 @@ public class MUser implements Serializable {
         this.status = status;
     }
 
-    public String getCreated() {
-        return created;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setCreated(String created) {
-        this.created = created;
-    }
-
-    public String getLastLogin() {
-        return lastLogin;
-    }
-
-    public void setLastLogin(String lastLogin) {
-        this.lastLogin = lastLogin;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     @Override
     public String toString() {
-        return "MUser{" +
+        return "ZdyUserTab{" +
         ", id=" + id +
         ", username=" + username +
+        ", password=" + password +
         ", avatar=" + avatar +
         ", email=" + email +
-        ", password=" + password +
         ", status=" + status +
-        ", created=" + created +
-        ", lastLogin=" + lastLogin +
+        ", phone=" + phone +
         "}";
     }
 }

@@ -1,6 +1,6 @@
 package com.springboot.zdy.dao;
 
-import com.springboot.zdy.entity.SysUser;
+import com.springboot.zdy.entity.ZdyMemeTab;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zhang dengyuan
- * @since 2021-04-19
+ * @since 2021-04-27
  */
-public interface SysUserDao extends BaseMapper<SysUser> {
+public interface ZdyMemeTabDao extends BaseMapper<ZdyMemeTab> {
 
 }

@@ -1,7 +1,7 @@
 package com.springboot.zdy.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.springboot.zdy.entity.MUser;
+import com.springboot.zdy.entity.ZdyUserTab;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -10,8 +10,8 @@ import org.apache.ibatis.annotations.Param;
  * </p>
  *
  * @author zhang dengyuan
- * @since 2021-04-19
+ * @since 2021-04-27
  */
-public interface MUserDao extends BaseMapper<MUser> {
-    MUser getUserInfoByUserName(@Param("username") String username);
+public interface ZdyUserTabDao extends BaseMapper<ZdyUserTab> {
+    ZdyUserTab getUserInfoByUserName(@Param("username") String username);
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.zdy.dao.ZdyMemeTabDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.springboot.zdy.entity.ZdyMemeTab">
+        <id column="id" property="id" />
+        <result column="meme_name" property="memeName" />
+        <result column="meme_content" property="memeContent" />
+        <result column="meme_from" property="memeFrom" />
+        <result column="meme_contributor" property="memeContributor" />
+        <result column="create_username" property="createUsername" />
+        <result column="create_time" property="createTime" />
+        <result column="create_code" property="createCode" />
+        <result column="update_username" property="updateUsername" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_code" property="updateCode" />
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, meme_name, meme_content, meme_from, meme_contributor, create_username, create_time, create_code, update_username, update_time, update_code
+    </sql>
+
+</mapper>

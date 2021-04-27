@@ -1,8 +1,9 @@
 package com.springboot.zdy.controller;
 
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.stereotype.Controller;
 
 /**
  * <p>
@@ -10,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * </p>
  *
  * @author zhang dengyuan
- * @since 2021-03-02
+ * @since 2021-04-27
  */
 @Controller
-@RequestMapping("/m-user")
-public class MUserController {
+@RequestMapping("/zdy-user-tab")
+public class ZdyUserTabController {
 
 }

@@ -3,11 +3,10 @@ package com.springboot.zdy.controller;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.springboot.zdy.config.utils.JwtUtils;
-import com.springboot.zdy.entity.MUser;
+import com.springboot.zdy.entity.ZdyUserTab;
 import com.springboot.zdy.entity.dto.LoginDto;
 import com.springboot.zdy.entity.result.Result;
-import com.springboot.zdy.service.MUserService;
-import com.springboot.zdy.service.SysUserService;
+import com.springboot.zdy.service.ZdyUserTabService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +28,14 @@ public class AccountController {
     @Autowired
     JwtUtils jwtUtils;
     @Autowired
-    SysUserService sysUserService;
-    @Autowired
-    MUserService userService;
+    ZdyUserTabService zdyUserTabService;
 
     //默认账号密码 markerhub / 111111
     @PostMapping("/login")
     public Result login(@Validated @RequestBody LoginDto loginDto, HttpServletResponse response) {
-        MUser user = userService.getUserInfoByUserName(loginDto.getUltraname());
+        //MUser user = userService.getUserInfoByUserName(loginDto.getUltraname());
+        ZdyUserTab user = zdyUserTabService.getUserInfoByUserName(loginDto.getUltraname());
+
         //MUser user = userService.getOne(new QueryWrapper<MUser>().eq("username", loginDto.getUltraname()));
         Assert.notNull(user, "用户不存在");
 

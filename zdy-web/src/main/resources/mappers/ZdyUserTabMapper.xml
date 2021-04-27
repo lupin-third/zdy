@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.springboot.zdy.dao.MUserDao">
+<mapper namespace="com.springboot.zdy.dao.ZdyUserTabDao">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.springboot.zdy.entity.MUser">
+    <resultMap id="BaseResultMap" type="com.springboot.zdy.entity.ZdyUserTab">
         <id column="id" property="id" />
         <result column="username" property="username" />
+        <result column="password" property="password" />
         <result column="avatar" property="avatar" />
         <result column="email" property="email" />
-        <result column="password" property="password" />
         <result column="status" property="status" />
-        <result column="created" property="created" />
-        <result column="lastLogin" property="lastLogin" />
+        <result column="phone" property="phone" />
     </resultMap>
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, username, avatar, email, password, status, created, lastLogin
+        id, username, password, avatar, email, status, phone
     </sql>
-    <select id="getUserInfoByUserName" resultType="com.springboot.zdy.entity.MUser">
-        select * from m_user where username = #{username}
+    <select id="getUserInfoByUserName" resultType="com.springboot.zdy.entity.ZdyUserTab">
+        select * from zdy_user_tab where username = #{username}
     </select>
 
 </mapper>

@@ -34,9 +34,10 @@ public class AccountController {
     @PostMapping("/login")
     public Result login(@Validated @RequestBody LoginDto loginDto, HttpServletResponse response) {
         //MUser user = userService.getUserInfoByUserName(loginDto.getUltraname());
+
         ZdyUserTab user = zdyUserTabService.getUserInfoByUserName(loginDto.getUltraname());
 
-        //MUser user = userService.getOne(new QueryWrapper<MUser>().eq("username", loginDto.getUltraname()));
+        //MUser user = userService.getOne(new QueryWrapper<MUser>().eq("username", loginDto.getUltraname()));111
         Assert.notNull(user, "用户不存在");
 
         if(!user.getPassword().equals(SecureUtil.md5(loginDto.getUltrapassword()))){

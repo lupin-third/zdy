@@ -49,7 +49,7 @@
         </profile>
     </profiles>
     <dependencies>
-        <dependency>
+        <dependency><!--spring版本为5.3.4 springboot版本为2.4.3-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>

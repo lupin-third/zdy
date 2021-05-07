@@ -57,6 +57,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--springcloud的jar包-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>2020.0.2</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
         <!--mysql驱动,目前用的范伟服务器的mysql为8以上版本所以版本为8.0.23，如切换为本地版mysql则更换为5.1.38-->
         <dependency>
             <groupId>mysql</groupId>

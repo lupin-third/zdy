@@ -1,15 +1,18 @@
 package com.springboot.zdy.entity.result;
 
+import java.util.List;
+
 /**
  * @author dengyuan zhang
  * @date 2021/2/26 - 11:30
  * 统一结果封装
  */
 
-public class Result {
+public class Result<T> {
     private Integer code;
     private String msg;
-    private Object data;
+    private T data;
+    private List<T> list;
 
     public Integer getCode() {
         return code;
@@ -27,45 +30,45 @@ public class Result {
         this.msg = msg;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
-    public static Result successful(Object data){
-        Result r = new Result();
+    public static <T>Result<T> successful(T data){
+        Result<T> r = new Result<>();
         r.setCode(0);
         r.setData(data);
         r.setMsg("操作成功");
         return r;
     }
 
-    public static Result successful(String msg, Object data){
-        Result r = new Result();
+    public static <T>Result<T> successful(String msg, T data){
+        Result<T> r = new Result<>();
         r.setCode(0);
         r.setData(data);
         r.setMsg(msg);
         return r;
     }
-    public static Result fail(String msg){
-        Result r = new Result();
+    public static <T>Result<T> fail(String msg){
+        Result<T> r = new Result<>();
         r.setCode(-1);
         r.setData(null);
         r.setMsg(msg);
         return r;
     }
-    public static Result fail(String msg, Object data){
-        Result r = new Result();
+    public static <T>Result<T> fail(String msg, T data){
+        Result<T> r = new Result<>();
         r.setCode(-1);
         r.setData(data);
         r.setMsg(msg);
         return r;
     }
-    public static Result fail(int code, String msg, Object data) {
-        Result r = new Result();
+    public static <T>Result<T> fail(int code, String msg, T data) {
+        Result<T> r = new Result();
         r.setCode(code);
         r.setMsg(msg);
         r.setData(data);

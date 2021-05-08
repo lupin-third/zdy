@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.zdy.dao.ZdyEncyclopediaTabDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.springboot.zdy.entity.ZdyEncyclopediaTab">
+        <id column="id" property="id"/>
+        <result column="ultraman_name_1" property="ultramanName1"/>
+        <result column="ultraman_image_1" property="ultramanImage1"/>
+        <result column="ultraman_name_2" property="ultramanName2"/>
+        <result column="ultraman_image_2" property="ultramanImage2"/>
+        <result column="ultraman_name_3" property="ultramanName3"/>
+        <result column="ultraman_image_3" property="ultramanImage3"/>
+        <result column="transfiguration" property="transfiguration"/>
+        <result column="ultraman_transform_person_1" property="ultramanTransformPerson1"/>
+        <result column="ultraman_transform_person_image_1" property="ultramanTransformPersonImage1"/>
+        <result column="ultraman_transform_person_2" property="ultramanTransformPerson2"/>
+        <result column="ultraman_transform_person_image_2" property="ultramanTransformPersonImage2"/>
+        <result column="ultraman_transform_person_3" property="ultramanTransformPerson3"/>
+        <result column="ultraman_transform_person_image_3" property="ultramanTransformPersonImage3"/>
+        <result column="ultraman_transform_person_4" property="ultramanTransformPerson4"/>
+        <result column="ultraman_transform_person_image_4" property="ultramanTransformPersonImage4"/>
+        <result column="ultraman_transform_person_5" property="ultramanTransformPerson5"/>
+        <result column="ultraman_transform_person_image_5" property="ultramanTransformPersonImage5"/>
+        <result column="ultraman_team" property="ultramanTeam"/>
+        <result column="ultraman_team_year" property="ultramanTeamYear"/>
+        <result column="ultraman_team_history" property="ultramanTeamHistory"/>
+        <result column="ultraman_team_image" property="ultramanTeamImage"/>
+        <result column="aircraft_or_car_name_1" property="aircraftOrCarName1"/>
+        <result column="aircraft_or_car_name_2" property="aircraftOrCarName2"/>
+        <result column="aircraft_or_car_name_3" property="aircraftOrCarName3"/>
+        <result column="aircraft_or_car_name_4" property="aircraftOrCarName4"/>
+        <result column="aircraft_or_car_name_5" property="aircraftOrCarName5"/>
+        <result column="aircraft_or_car_image_1" property="aircraftOrCarImage1"/>
+        <result column="aircraft_or_car_image_2" property="aircraftOrCarImage2"/>
+        <result column="aircraft_or_car_image_3" property="aircraftOrCarImage3"/>
+        <result column="aircraft_or_car_image_4" property="aircraftOrCarImage4"/>
+        <result column="aircraft_or_car_image_5" property="aircraftOrCarImage5"/>
+        <result column="ultraman_team_person_1" property="ultramanTeamPerson1"/>
+        <result column="ultraman_team_image_1" property="ultramanTeamImage1"/>
+        <result column="ultraman_team_person_details_1" property="ultramanTeamPersonDetails1"/>
+        <result column="ultraman_team_person_2" property="ultramanTeamPerson2"/>
+        <result column="ultraman_team_image_2" property="ultramanTeamImage2"/>
+        <result column="ultraman_team_person_details_2" property="ultramanTeamPersonDetails2"/>
+        <result column="ultraman_team_person_3" property="ultramanTeamPerson3"/>
+        <result column="ultraman_team_image_3" property="ultramanTeamImage3"/>
+        <result column="ultraman_team_person_details_3" property="ultramanTeamPersonDetails3"/>
+        <result column="ultraman_team_person_4" property="ultramanTeamPerson4"/>
+        <result column="ultraman_team_image_4" property="ultramanTeamImage4"/>
+        <result column="ultraman_team_person_details_4" property="ultramanTeamPersonDetails4"/>
+        <result column="ultraman_team_person_5" property="ultramanTeamPerson5"/>
+        <result column="ultraman_team_image_5" property="ultramanTeamImage5"/>
+        <result column="ultraman_team_person_details_5" property="ultramanTeamPersonDetails5"/>
+        <result column="ultraman_team_person_6" property="ultramanTeamPerson6"/>
+        <result column="ultraman_team_image_6" property="ultramanTeamImage6"/>
+        <result column="ultraman_team_person_details_6" property="ultramanTeamPersonDetails6"/>
+        <result column="ultraman_team_person_7" property="ultramanTeamPerson7"/>
+        <result column="ultraman_team_image_7" property="ultramanTeamImage7"/>
+        <result column="ultraman_team_person_details_7" property="ultramanTeamPersonDetails7"/>
+        <result column="ultraman_team_person_8" property="ultramanTeamPerson8"/>
+        <result column="ultraman_team_image_8" property="ultramanTeamImage8"/>
+        <result column="ultraman_team_person_details_8" property="ultramanTeamPersonDetails8"/>
+        <result column="create_username" property="createUsername"/>
+        <result column="create_time" property="createTime"/>
+        <result column="create_code" property="createCode"/>
+        <result column="update_username" property="updateUsername"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="update_code" property="updateCode"/>
+        <result column="status" property="status"/>
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, ultraman_name_1, ultraman_image_1, ultraman_name_2, ultraman_image_2, ultraman_name_3, ultraman_image_3, transfiguration, ultraman_transform_person_1, ultraman_transform_person_image_1, ultraman_transform_person_2, ultraman_transform_person_image_2, ultraman_transform_person_3, ultraman_transform_person_image_3, ultraman_transform_person_4, ultraman_transform_person_image_4, ultraman_transform_person_5, ultraman_transform_person_image_5, ultraman_team, ultraman_team_year, ultraman_team_history, ultraman_team_image, aircraft_or_car_name_1, aircraft_or_car_name_2, aircraft_or_car_name_3, aircraft_or_car_name_4, aircraft_or_car_name_5, aircraft_or_car_image_1, aircraft_or_car_image_2, aircraft_or_car_image_3, aircraft_or_car_image_4, aircraft_or_car_image_5, ultraman_team_person_1, ultraman_team_image_1, ultraman_team_person_details_1, ultraman_team_person_2, ultraman_team_image_2, ultraman_team_person_details_2, ultraman_team_person_3, ultraman_team_image_3, ultraman_team_person_details_3, ultraman_team_person_4, ultraman_team_image_4, ultraman_team_person_details_4, ultraman_team_person_5, ultraman_team_image_5, ultraman_team_person_details_5, ultraman_team_person_6, ultraman_team_image_6, ultraman_team_person_details_6, ultraman_team_person_7, ultraman_team_image_7, ultraman_team_person_details_7, ultraman_team_person_8, ultraman_team_image_8, ultraman_team_person_details_8, create_username, create_time, create_code, update_username, update_time, update_code, status
+    </sql>
+    <select id="getList" resultType="com.springboot.zdy.entity.ZdyEncyclopediaTab">
+        select id, ultraman_name_1, ultraman_image_1, ultraman_name_2, ultraman_image_2, ultraman_name_3, ultraman_image_3, transfiguration, ultraman_transform_person_1, ultraman_transform_person_image_1, ultraman_transform_person_2, ultraman_transform_person_image_2, ultraman_transform_person_3, ultraman_transform_person_image_3, ultraman_transform_person_4, ultraman_transform_person_image_4, ultraman_transform_person_5, ultraman_transform_person_image_5, ultraman_team, ultraman_team_year, ultraman_team_history, ultraman_team_image, aircraft_or_car_name_1, aircraft_or_car_name_2, aircraft_or_car_name_3, aircraft_or_car_name_4, aircraft_or_car_name_5, aircraft_or_car_image_1, aircraft_or_car_image_2, aircraft_or_car_image_3, aircraft_or_car_image_4, aircraft_or_car_image_5, ultraman_team_person_1, ultraman_team_image_1, ultraman_team_person_details_1, ultraman_team_person_2, ultraman_team_image_2, ultraman_team_person_details_2, ultraman_team_person_3, ultraman_team_image_3, ultraman_team_person_details_3, ultraman_team_person_4, ultraman_team_image_4, ultraman_team_person_details_4, ultraman_team_person_5, ultraman_team_image_5, ultraman_team_person_details_5, ultraman_team_person_6, ultraman_team_image_6, ultraman_team_person_details_6, ultraman_team_person_7, ultraman_team_image_7, ultraman_team_person_details_7, ultraman_team_person_8, ultraman_team_image_8, ultraman_team_person_details_8, create_username, create_time, create_code, update_username, update_time, update_code, status from zdy_encyclopedia_tab
+    </select>
+
+</mapper>

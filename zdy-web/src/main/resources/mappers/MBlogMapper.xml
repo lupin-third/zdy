@@ -16,5 +16,10 @@
     <sql id="Base_Column_List">
         id, userId, title, description, content, created, status
     </sql>
-
+    <!--SqlServer查询数据库所有表名及数据行数-->
+    <!--
+        SELECT A.NAME ,B.ROWS  FROM sysobjects  A JOIN sysindexes B ON A.id = B.id
+        WHERE A.xtype = 'U' AND B.indid IN(0,1) AND B.rows>0 ORDER BY B.ROWS DESC
+    -->
+    
 </mapper>

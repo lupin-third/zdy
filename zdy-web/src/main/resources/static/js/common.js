@@ -40,14 +40,12 @@ var common = {
         let format = common.chooseDateFormat(dates);
         date = new Date(dates);
         let day = date.getDate(),
-            month = date.getMonth(),
+            month = date.getMonth()+1,
             year = date.getFullYear(),
             dateArr = common.dateFormat(date,format).split(' ');
 
         year = year + parseInt((month + num) / 12);
         month = (month + num) % 12;
-        //0-11 转变为 1-12
-        month += 1;
 
         //获取特定年月的最大天数值
         let maxDayCount = new Date(year, month, 0).getDate();

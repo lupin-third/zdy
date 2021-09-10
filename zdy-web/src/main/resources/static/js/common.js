@@ -44,8 +44,14 @@ var common = {
             year = date.getFullYear(),
             dateArr = common.dateFormat(date,format).split(' ');
 
-        year = year + parseInt((month + num) / 12);
-        month = (month + num) % 12;
+        if(num>=0){
+            year = year + parseInt((month + num) / 12);
+            month = (month + num) % 12;
+        }else{
+            let clacMonth = Math.abs(num);
+            year = year - parseInt((month + clacMonth) / 12);
+            month = (month + clacMonth) % 12;
+        }
 
         //获取特定年月的最大天数值
         let maxDayCount = new Date(year, month, 0).getDate();

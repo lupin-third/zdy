@@ -9,6 +9,8 @@ import com.springboot.zdy.entity.result.Result;
 import com.springboot.zdy.service.ZdyUserTabService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
@@ -25,6 +27,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 public class AccountController {
+    private Logger logger = LoggerFactory.getLogger(AccountController.class);
+
     @Autowired
     JwtUtils jwtUtils;
     @Autowired

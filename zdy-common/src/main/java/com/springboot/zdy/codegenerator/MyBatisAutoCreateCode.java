@@ -21,7 +21,7 @@ public class MyBatisAutoCreateCode {
 
     public static void main(String[] args) {
         System.out.println("是否开始自动生成(y)");
-        if (new Scanner(System.in).next().equalsIgnoreCase("y") == false) {
+        if (!new Scanner(System.in).next().equalsIgnoreCase("y")) {
             return;
         }
         //自动代码生成器
@@ -51,19 +51,19 @@ public class MyBatisAutoCreateCode {
         mpg.setGlobalConfig(gc);
 
         //sqlserver数据源配置
-//        DataSourceConfig dsc = new DataSourceConfig();
-//        dsc.setUrl("jdbc:sqlserver://127.0.0.1:1433;DatabaseName=zdy");
-//        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-//        dsc.setUsername("sa");
-//        dsc.setPassword("net2k");
-//        mpg.setDataSource(dsc);
-        //mysql数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://112.124.108.164:3306/zdy?characterEncoding=utf8");
-        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("123456");
+        dsc.setUrl("jdbc:sqlserver://127.0.0.1:1433;DatabaseName=zdy");
+        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        dsc.setUsername("sa");
+        dsc.setPassword("net2k");
         mpg.setDataSource(dsc);
+        //mysql数据源配置
+//        DataSourceConfig dsc = new DataSourceConfig();
+//        dsc.setUrl("jdbc:mysql://112.124.108.164:3306/zdy?characterEncoding=utf8");
+//        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
+//        dsc.setUsername("root");
+//        dsc.setPassword("123456");
+//        mpg.setDataSource(dsc);
 
 
 
